@@ -130,6 +130,8 @@ class RegistryConfig(FeastBaseModel):
     sqlalchemy_config_kwargs: Dict[str, Any] = {}
     """ Dict[str, Any]: Extra arguments to pass to SQLAlchemy.create_engine. """
 
+    cache_mode: StrictStr = "sync"
+
 
 class RepoConfig(FeastBaseModel):
     """Repo config. Typically loaded from `feature_store.yaml`"""
